@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Accordion from "../components/Accordion";
+import DoughnutChart from "../components/DoughnutChart";
 import GreenButton from "../components/GreenButton";
 import Navbar from "../components/Navbar";
 import TestimonialCarousel from "../components/TestimonialCarousel";
@@ -15,7 +16,7 @@ export default function HomePage() {
                 <h2 className="text-4xl font-bold mb-4">Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h2>
                 <p className="max-w-md">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas
                     terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmuuntuk sewa mobil selama 24 jam.</p>
-                <GreenButton text="Mulai Sewa Mobil" additionalStyles="mt-5" />
+                <Link to='/search'><GreenButton text="Mulai Sewa Mobil" additionalStyles="mt-5" /></Link>
             </div>
             <img className="flex-1" src="./images/search_page_car.png" alt="Car" />
         </div>
@@ -82,6 +83,8 @@ export default function HomePage() {
                 </div>
             </div>
         </section>
+        
+        <DoughnutChart/>
 
         <TestimonialCarousel />
 
@@ -91,7 +94,7 @@ export default function HomePage() {
                 <h1 className='font-semibold text-4xl'>Sewa Mobil di Malang Sekarang</h1>
                 <p className='text-sm font-light mt-6 mb-12'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor<br />incididunt ut labore et
                     dolore magna aliqua.</p>
-                <GreenButton text="Mulai Sewa Mobil" additionalStyles="" />
+                <Link to='/search'><GreenButton text="Mulai Sewa Mobil" additionalStyles="mt-5" /></Link>
             </div>
         </section>
 
