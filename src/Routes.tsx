@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import CarDetailPage from "./pages/CarDetailPage";
+import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import SearchPage from "./pages/SearchPage";
 import SearchResultPage from "./pages/SearchResultPage";
@@ -11,7 +12,8 @@ export default function AppRoutes() {
       <Navbar />
       <main>
          <Routes>
-            <Route index element={<SearchPage />} />
+            <Route index element={<HomePage />} />
+            <Route path="search" element={<SearchPage />} />
             <Route path="search-result" element={<SearchResultPage />} />
             <Route path="car-rent-detail/:id" element={<CarDetailPage />} />
             <Route path='*' element={<NotFound />} />
