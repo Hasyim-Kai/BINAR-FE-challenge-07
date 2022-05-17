@@ -1,0 +1,6 @@
+export const BUY_CAR: string = 'BUY_CAR'
+export const DELETE_CAR: string = 'DELETE_CAR'
+export const FETCH_CARS_REQUEST: string = 'FETCH_CARS_REQUEST'
+export const FETCH_CAR_DETAIL_SUCCESS: string = 'FETCH_CAR_DETAIL_SUCCESS'
+export const FETCH_CARS_SUCCESS: string = 'FETCH_CARS_SUCCESS'
+export const FETCH_CARS_FAILURE: string = 'FETCH_CARS_FAILURE'
