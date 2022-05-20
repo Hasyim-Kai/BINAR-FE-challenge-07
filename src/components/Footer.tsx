@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
+    // get the active Route path
+    let isAdminPage = useLocation().pathname.includes(`admin`) ? true : false
+
     const flexDisplay = `flex flex-col lg:flex-row justify-around`;
 
-    return <footer className={`${flexDisplay} container lg:mx-auto mb-16 mt-32 pl-12`}>
+    return isAdminPage ? <></> : <footer className={`${flexDisplay} container lg:mx-auto mb-16 mt-32 pl-12 lg:pl-0`}>
         <div>
             <p>Jalan Suroyo No. 161 Mayangan Kota<br />Probolonggo 672000</p>
             <p className="mt-4">binarcarrental@gmail.com</p>

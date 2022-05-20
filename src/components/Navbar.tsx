@@ -1,15 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import GreenButton from './GreenButton';
 
 export default function Navbar(): JSX.Element {
+    // get the active Route path
+    let isAdminPage = useLocation().pathname.includes(`admin`) ? true : false
 
     const [isMobileNavOpen, setMobileNavOpen] = useState(false);
     function handleSetMobileNavOpen() { setMobileNavOpen(!isMobileNavOpen) };
 
     // if the active Route path is Login, then disable Navbar
-    return <nav className="w-full z-50 bg-backgroundGrey">
+    return isAdminPage ? <></> : <nav className="w-full z-50 bg-backgroundGrey">
         {/* <!-- container --> */}
         <div className="container mx-auto flex flex-wrap justify-between items-center px-4 py-3 lg:space-x-4">
             <div className='flex'>
