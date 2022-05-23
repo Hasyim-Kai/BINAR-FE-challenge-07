@@ -1,4 +1,4 @@
-import { BUY_CAR, DELETE_CAR, FETCH_CAR_DETAIL_SUCCESS } from "./carTypes"
+import { ADD_CAR_SUCCESS, FETCH_CAR_DETAIL_SUCCESS } from "./carTypes"
 import { Dispatch } from 'redux'
 import { FETCH_CARS_REQUEST, FETCH_CARS_SUCCESS, FETCH_CARS_FAILURE } from './carTypes'
 
@@ -39,10 +39,17 @@ export const fetchCarDetailSuccess = (car: {}) => {
     payload: car
   }
 }
+
 export const fetchCarsSuccess = (cars: []) => {
   return {
     type: FETCH_CARS_SUCCESS,
     payload: cars
+  }
+}
+
+export const addCarSuccess = () => {
+  return {
+    type: ADD_CAR_SUCCESS
   }
 }
 

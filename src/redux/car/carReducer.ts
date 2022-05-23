@@ -1,5 +1,5 @@
 import CarDetailPage from "../../pages/CarDetailPage"
-import { FETCH_CARS_FAILURE, FETCH_CARS_REQUEST, FETCH_CARS_SUCCESS, FETCH_CAR_DETAIL_SUCCESS } from "./carTypes"
+import { ADD_CAR_SUCCESS, FETCH_CARS_FAILURE, FETCH_CARS_REQUEST, FETCH_CARS_SUCCESS, FETCH_CAR_DETAIL_SUCCESS } from "./carTypes"
 
 const initialState: CarState = {
     loading: false,
@@ -31,6 +31,12 @@ const carReducer = (state: CarState = initialState, action: CarActionTypes) => {
                 ...state,
                 loading: false,
                 cars: action.payload,
+                error: ''
+            }
+        case ADD_CAR_SUCCESS:
+            return {
+                ...state,
+                loading: false,
                 error: ''
             }
         case FETCH_CARS_FAILURE:
