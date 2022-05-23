@@ -1,6 +1,9 @@
 import { useSelector, useDispatch, RootStateOrAny } from 'react-redux'
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+// @ts-ignore
+import ModalImage from "react-modal-image";
+
 import Loading from '../components/Loading';
 import { fetchCarDetail } from '../redux/car/carAction';
 import SearchMenu from '../components/SearchMenu';
@@ -61,12 +64,15 @@ export default function CarDetailPage() {
                </div>
             </section>
 
-            <div className="ml-auto"><GreenButton text="Lanjutkan Pembayaran" additionalStyles='' /></div>
+            <div className="ml-auto">
+               <Link to={`invoice`}><GreenButton text="Lanjutkan Pembayaran" additionalStyles='w-full mt-5' /></Link>
+            </div>
          </div>
 
 
          <aside className={`${sectionStyle} h-auto lg:w-1/2`}>
-            <img className="mx-auto" src={Cars.carDetail?.image} alt="Car" />
+            {/* <img className="mx-auto" src={Cars.carDetail?.image} alt="Car" /> */}
+            <ModalImage small={Cars.carDetail?.image} large={Cars.carDetail?.image} hideDownload='true' alt={Cars.carDetail.name} />;
             <h4 className="font-bold mb-2 mt-12">{Cars.carDetail.name} / {Cars.carDetail.category}</h4>
             <div className="flex flex-wrap mb-12 text-gray-500">
                <p className="flex mr-4"><img className="mr-2" src="/images/icons/fi_users.svg" alt="user" />{Cars.carDetail.capacity}</p>
@@ -77,7 +83,7 @@ export default function CarDetailPage() {
                <p>Total</p>
                <p className="text-lg font-bold">Rp. {Cars.carDetail.price}</p>
             </div>
-            <GreenButton text="Lanjutkan Pembayaran" additionalStyles='w-full mt-5' />
+            <Link to={`invoice`}><GreenButton text="Lanjutkan Pembayaran" additionalStyles='w-full mt-5' /></Link>
          </aside>
       </div>
    </>
