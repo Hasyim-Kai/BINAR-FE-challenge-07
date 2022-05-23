@@ -1,5 +1,0 @@
-export const FETCH_CARS_REQUEST: string = 'FETCH_CARS_REQUEST'
-export const FETCH_CAR_DETAIL_SUCCESS: string = 'FETCH_CAR_DETAIL_SUCCESS'
-export const FETCH_CARS_SUCCESS: string = 'FETCH_CARS_SUCCESS'
-export const ADD_CAR_SUCCESS: string = 'ADD_CAR_SUCCESS'
-export const FETCH_CARS_FAILURE: string = 'FETCH_CARS_FAILURE'

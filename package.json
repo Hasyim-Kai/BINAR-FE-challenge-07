@@ -1,22 +1,23 @@
 {
-  "name": "binar-fe-challenge-07",
+  "name": "pindahan",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "chart.js": "^3.7.1",
+    "next": "10.2.3",
     "react": "^16.14.0",
     "react-chartjs-2": "^4.1.0",
     "react-dom": "^16.14.0",
     "react-modal-image": "^2.5.0",
     "react-pdf": "^5.7.2",
-    "react-redux": "^7.2.8",
-    "react-router-dom": "^6.3.0",
-    "redux": "^4.1.2",
+    "react-redux": "^8.0.1",
+    "redux": "^4.2.0",
     "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
@@ -26,11 +27,11 @@
     "@types/react-redux": "^7.1.24",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
-    "@vitejs/plugin-react": "^1.0.7",
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^7.23.0",
+    "eslint-config-next": "10.2.3",
+    "postcss": "^8.4.14",
     "tailwindcss": "^3.0.24",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.0"
+    "typescript": "4.6.4"
   }
 }
